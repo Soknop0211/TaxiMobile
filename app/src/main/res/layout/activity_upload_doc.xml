@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.upload_doc.UploadDocActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/appBar_ui"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary">
+
+            <ImageView
+                android:id="@+id/action_back_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_arrow_back_ios_new_24"
+                app:tint="@color/white" />
+
+            <TextView
+                style="@style/HeadTextStyle"
+                android:id="@+id/app_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/upload_documents"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/action_done_mtb"
+                style="@style/Button.Large.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:text="@string/done"
+                android:textAllCaps="false"
+                app:strokeColor="@color/white"
+                app:strokeWidth="1dp" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <!--selfie profile-->
+                    <TextView
+                        style="@style/BodyTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/selfie_picture"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <FrameLayout
+                        android:id="@+id/action_selfie_picture_frame_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/selfie_picture_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:alpha="0.5"
+                            android:minHeight="100dp"
+                            android:src="@drawable/default_profile" />
+
+                        <ImageView
+                            android:id="@+id/add_selfie_picture_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/circle_add_color_primary_drawable" />
+
+                    </FrameLayout>
+
+                    <!--ID card-->
+                    <TextView
+                        style="@style/BodyTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/id_card"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <FrameLayout
+                        android:id="@+id/action_id_card_frame_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/id_card_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="190dp"
+                            android:alpha="0.5"
+                            android:src="@drawable/id_card_holder" />
+
+                        <ImageView
+                            android:id="@+id/add_id_card_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/circle_add_color_primary_drawable" />
+
+                    </FrameLayout>
+                    <!--select community-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/BodyTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/choose_community_required"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/search_community_img"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_search_24" />
+
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/community_text_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="4"
+                        tools:listitem="@layout/community_taxi_row_layout" />
+
+                    <!--choose vehicle type-->
+                    <TextView
+                        style="@style/BodyTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/choose_vehicle_types"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/vehicle_select_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        tools:itemCount="1"
+                        tools:listitem="@layout/vehicle_select_row_" />
+
+                    <!--Vehicle picture-->
+                    <TextView
+                        style="@style/BodyTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/vehicle_picture"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <FrameLayout
+                        android:id="@+id/action_select_vehicle_frame_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/vehicle_picture_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:alpha="0.3"
+                            android:src="@drawable/taxi" />
+
+                        <ImageView
+                            android:id="@+id/add_select_vehicle_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/circle_add_color_primary_drawable" />
+
+                    </FrameLayout>
+
+                    <!--plate number-->
+                    <TextView
+                        style="@style/BodyTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/plate_number"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <FrameLayout
+                        android:id="@+id/action_plate_number_frame_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/plate_number_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:alpha="0.5"
+                            android:src="@drawable/plate_number" />
+
+                        <ImageView
+                            android:id="@+id/add_plate_number_img"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/circle_add_color_primary_drawable" />
+
+                    </FrameLayout>
+
+                    <!--phone number-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/plate_number_textInputLayout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:hint="@string/plate_number"
+                        android:longClickable="false"
+                        app:endIconMode="clear_text"
+                        app:helperTextTextColor="@color/red"
+                        app:startIconDrawable="@drawable/custom_plate_number_drawable"
+                        app:startIconTint="@null">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/BodyTextStyle"
+                            android:id="@+id/plate_number_textInputEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--organization code-->
+
+                    <LinearLayout
+                        android:id="@+id/organization_code_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="10dp">
+
+                            <TextView
+                                style="@style/BodyTextStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/organization_code_required"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <!--organization tf-->
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/organization_code_textInputLayout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:hint="@string/organization_code"
+                            android:longClickable="false"
+                            app:endIconMode="clear_text"
+                            app:helperTextTextColor="@color/red"
+                            app:startIconDrawable="@drawable/organization_code"
+                            app:startIconTint="@null">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                style="@style/BodyTextStyle"
+                                android:id="@+id/organization_code_textInputEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/loading_"
+        layout="@layout/loading_layout"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

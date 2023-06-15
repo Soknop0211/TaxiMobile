@@ -1,0 +1,16 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+
+    <style name="PixAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:screenOrientation">portrait</item>
+        <item name="colorPrimary">@color/colorPrimaryPix</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryPix</item>
+        <item name="colorAccent">@color/colorPrimaryLightPix</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+</resources>

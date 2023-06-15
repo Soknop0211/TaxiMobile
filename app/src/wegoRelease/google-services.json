@@ -1,0 +1,97 @@
+{
+  "project_info": {
+    "project_number": "333975812617",
+    "project_id": "eazy-taxi-prod",
+    "storage_bucket": "eazy-taxi-prod.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333975812617:android:5d74acecc098433bbe16d8",
+        "android_client_info": {
+          "package_name": "com.eazy.daikou.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333975812617-qcupcevqvtrle0t4lpuvn1m6m36vql0m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8AUSOSXSz2IE755g6bvikqZ_rmFnlXmc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "333975812617-qcupcevqvtrle0t4lpuvn1m6m36vql0m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333975812617:android:e7a49ba08a418ababe16d8",
+        "android_client_info": {
+          "package_name": "com.eazy.daikou.taxi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333975812617-qcupcevqvtrle0t4lpuvn1m6m36vql0m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8AUSOSXSz2IE755g6bvikqZ_rmFnlXmc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "333975812617-qcupcevqvtrle0t4lpuvn1m6m36vql0m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333975812617:android:e8081188a4bc37b2be16d8",
+        "android_client_info": {
+          "package_name": "com.eazy.wego.driver.taxi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333975812617-qcupcevqvtrle0t4lpuvn1m6m36vql0m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8AUSOSXSz2IE755g6bvikqZ_rmFnlXmc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "333975812617-qcupcevqvtrle0t4lpuvn1m6m36vql0m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

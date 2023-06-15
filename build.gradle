@@ -1,0 +1,37 @@
+buildscript {
+    dependencies {
+        classpath 'com.google.gms:google-services:4.3.13'
+    }
+}// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    id 'com.android.application' version '7.1.1' apply false
+    id 'com.android.library' version '7.1.1' apply false
+    id 'org.jetbrains.kotlin.android' version '1.5.21' apply false/*1.5.21*/
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin' version '2.0.0' apply false
+
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+/*android {
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+        }
+    }
+}*/
+
+/*
+android {
+    buildTypes {
+        release {
+            signingConfig signingConfigs.debug
+        }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+*/

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.payment_method.AddABAAccountNumberFragment">
+
+
+    <ImageView
+        android:id="@+id/action_back_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/background_select_item_back"
+        android:padding="12dp"
+        android:src="@drawable/ic_arrow_back_ios_new_24"
+        app:tint="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15dp">
+
+            <include layout="@layout/rectangle_ui" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:paddingBottom="30dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/aba_logo_card_view"
+                    android:layout_width="57dp"
+                    android:layout_height="57dp"
+                    android:layout_gravity="center_horizontal"
+                    app:cardCornerRadius="7dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:id="@+id/bank_logo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/aba_pay_icon" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/bank_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="ABA PAY"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/account_number_tf_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="10dp">
+
+                    <com.eazy.daiku.utility.FormattedNumberEditText
+                        android:id="@+id/account_number_tf_editext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/account_number"
+                        android:padding="12dp"
+                        android:textSize="16sp"
+                        android:maxLength="20"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/action_confirm_mtb"
+                    style="@style/Button.Large.Primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:minHeight="60dp"
+                    android:text="@string/confirm"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <include
+        android:id="@+id/loading_view"
+        layout="@layout/loading_layout"
+        android:visibility="gone" />
+</FrameLayout>

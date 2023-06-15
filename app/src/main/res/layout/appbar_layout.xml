@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/appBarLayout"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    android:fitsSystemWindows="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ToolbarTheme"
+            app:layout_collapseMode="pin" />
+
+        <!-- style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"-->
+        <TextView
+            android:id="@+id/title"
+            style="@style/HeadTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:maxWidth="300dp"
+            android:minWidth="200dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:text="N/A"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/qrCode"
+                android:layout_width="36dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/qr_code_white"
+                android:visibility="gone"
+                />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+</com.google.android.material.appbar.AppBarLayout>

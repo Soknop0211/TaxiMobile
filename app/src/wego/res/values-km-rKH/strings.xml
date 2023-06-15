@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="HeadTextStyle">
+        <item name="android:fontFamily">@font/kantumruy_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="BodyTextStyle">
+        <item name="fontFamily">@font/noto_sans_khmer_regular</item>
+    </style>
+</resources>

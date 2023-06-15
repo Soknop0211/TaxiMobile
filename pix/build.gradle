@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+ext {
+    PUBLISH_GROUP_ID = 'com.fxn769'
+    PUBLISH_ARTIFACT_ID = 'pix'
+    PUBLISH_VERSION = '1.2.4'
+}
+android {
+    compileSdkVersion 33
+    defaultConfig {
+        minSdkVersion 24
+        targetSdkVersion 33
+        versionCode 2
+        versionName "1.2.4"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+repositories {
+//    maven { url 'https://jitpack.io' }
+}
+def supportLibraryVersion = '27.1.1'
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:' + supportLibraryVersion
+    implementation 'com.android.support:design:' + supportLibraryVersion
+    implementation 'com.android.support:exifinterface:' + supportLibraryVersion
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+//    implementation 'io.fotoapparat.fotoapparat:library:2.7.0' //2.3.1
+//    implementation group: 'io.fotoapparat', name: 'fotoapparat', version: '2.7.0'
+    implementation 'io.fotoapparat:fotoapparat:2.7.0'
+//    implementation 'com.github.bumptech.glide:glide:4.3.1'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    implementation 'com.android.support:recyclerview-v7:' + supportLibraryVersion
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.31"
+
+}
+
+//apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'

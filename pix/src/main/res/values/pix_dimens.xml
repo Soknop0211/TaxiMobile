@@ -1,0 +1,24 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="small_thumb">62dp</dimen>
+
+    <dimen name="boundaryLength">54dp</dimen>
+    <dimen name="boundaryStroke">3dp</dimen>
+
+    <dimen name="clipRectRight">90dp</dimen>
+    <dimen name="clipRectBottom">90dp</dimen>
+    <dimen name="clipRectTop">0dp</dimen>
+    <dimen name="clipRectLeft">0dp</dimen>
+
+    <dimen name="rectInset">8dp</dimen>
+    <dimen name="rectCorner">8dp</dimen>
+    <dimen name="smallRectOffset">40dp</dimen>
+
+    <dimen name="boundaryMerging">1dp</dimen>
+
+    <dimen name="circleRadius">30dp</dimen>
+    <dimen name="textOffset">20dp</dimen>
+    <dimen name="strokeWidth">4dp</dimen>
+
+    <dimen name="textSize">18sp</dimen>
+</resources>

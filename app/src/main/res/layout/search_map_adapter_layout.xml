@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:background="?attr/selectableItemBackground"
+        android:padding="7dp">
+
+        <ImageView
+            android:id="@+id/ic_history"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/direction"
+            app:tint="@color/colorPrimary"
+            android:padding="4dp"
+            android:background="@drawable/round_corner_white_point_a"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/ic_history"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/BodyTextStyle"
+                android:id="@+id/history_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textColor="@color/black" />
+
+            <TextView
+                style="@style/BodyTextStyle"
+                android:id="@+id/history_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

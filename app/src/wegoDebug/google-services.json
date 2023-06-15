@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "1079358092157",
+    "project_id": "wego-driver-dev",
+    "storage_bucket": "wego-driver-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1079358092157:android:9dba6d26dfd8c424cd1214",
+        "android_client_info": {
+          "package_name": "com.eazy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1079358092157-kat5u0o6hlq63u3qjfkc5povk19jh9bc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApkmS66St8ybKx2SEvOf3AbPGE82nnf30"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1079358092157-kat5u0o6hlq63u3qjfkc5povk19jh9bc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1079358092157:android:1f191579698ad732cd1214",
+        "android_client_info": {
+          "package_name": "com.eazy.wego.driver.taxi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1079358092157-kat5u0o6hlq63u3qjfkc5povk19jh9bc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApkmS66St8ybKx2SEvOf3AbPGE82nnf30"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1079358092157-kat5u0o6hlq63u3qjfkc5povk19jh9bc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

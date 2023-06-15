@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppThemeNoActionBarMaterial" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
+        <!--        <item name="android:windowAnimationStyle">@style/CustomerActivityAnimation</item>-->
+    </style>
+
+    <style name="BottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="BottomNavigationView" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="AppThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
+        <!--        <item name="android:windowAnimationStyle">@style/CustomerActivityAnimation</item>-->
+    </style>
+
+    <style name="OverflowMenu" parent="Widget.AppCompat.Light.ListPopupWindow">
+        <item name="overlapAnchor">false</item>
+        <item name="android:dropDownVerticalOffset">5dp</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="AppThemeNoActionBar">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="popupMenuStyle">@color/white</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppThemeNoActionBar">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="Button.Large.AccentColorOutLine" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <!--<item name="android:textColor">@color/kesspay_accent_button_text_color_outline</item>-->
+        <item name="android:gravity">center</item>
+        <item name="android:padding">5dp</item>
+        <item name="cornerRadius">4dp</item>
+        <item name="strokeColor">@color/colorAccent</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Button">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Button.Large">
+        <item name="android:textSize">@dimen/text_primary</item>
+        <item name="android:gravity">left|center_horizontal|clip_horizontal</item>
+        <item name="android:layout_width">280dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Button.Large.Primary">
+        <item name="android:textColor">@color/kesspay_accent_button_text_color</item>
+        <item name="android:backgroundTint">@color/kesspay_primary_button_background</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">5dp</item>
+        <item name="cornerRadius">4dp</item>
+        <item name="android:textSize">@dimen/text_secondary</item>
+
+    </style>
+
+    <style name="Button.Large.White">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:backgroundTint">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">5dp</item>
+        <item name="cornerRadius">5dp</item>
+        <item name="android:textSize">@dimen/text_primary</item>
+    </style>
+
+    <style name="Button.Large.gray_light">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:backgroundTint">@color/gray_btn_bg_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">5dp</item>
+        <item name="cornerRadius">5dp</item>
+        <item name="android:textSize">@dimen/text_primary</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.TextInputLayout.FilledBox" parent="Base.Widget.MaterialComponents.TextInputLayout">
+        <!--            <item name="materialThemeOverlay">@style/Tona</item>-->
+    </style>
+
+    <style name="Button.Small.NoOutLine" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="Button.Small.NoOutLine.8dp" parent="Button.Small.NoOutLine">
+        <!--        <item name="android:background">@drawable/kesspay_button_background_no_outline_round_8dp</item>-->
+        <item name="cornerRadius">8dp</item>
+        <!--        <item name="android:backgroundTint">@color/white</item>-->
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="TopRoundCornerBottomSheetDialogTheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_top_corner</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustPan|adjustResize|stateVisible</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize5Percent" parent="">
+        <item name="cornerSize">1%</item>
+    </style>
+
+    <style name="HeadTextStyle">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="BodyTextStyle">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!-- Alert Dialog with shape round corner -->
+    <style name="RoundShapeTheme" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.Dialog.Rounded
+        </item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MyApp.Dialog.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">15dp</item>
+    </style>
+
+    <style name="TopCornerCardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">40dp</item>
+        <item name="cornerSizeTopLeft">40dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+
+    </style>
+
+    <style name="Button.Large.white_background">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">5dp</item>
+        <item name="cornerRadius">4dp</item>
+        <item name="android:fontFamily">@font/dmsans_regular</item>
+        <item name="android:textSize">@dimen/text_secondary</item>
+
+    </style>
+
+    <style name="Widget.App.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Switch</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Switch" parent="Widget.App.Switch">
+        <item name="colorOnSurface">@color/gray_light_80</item>
+        <item name="colorSecondary">@color/colorPrimary</item>
+    </style>
+
+</resources>

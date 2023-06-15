@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/booking_payment_navigation_layout"
+    app:startDestination="@id/selectCarBookingFragment">
+
+    <fragment
+        android:id="@+id/selectCarBookingFragment"
+        android:name="com.eazy.daiku.ui.customer.step_booking.SelectCarBookingFragment"
+        android:label="fragment_select_car_type"
+        tools:layout="@layout/select_car_booking_layout">
+        <action
+            android:id="@+id/action_select_car_booking_to_trip_detail"
+            app:destination="@+id/trip_detail_booking"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/trip_detail_booking"
+        android:name="com.eazy.daiku.ui.customer.step_booking.TripDetailBookingFragment"
+        android:label="fragment_trip_detail"
+        tools:layout="@layout/trip_detail_booking_layout" />
+
+</navigation>

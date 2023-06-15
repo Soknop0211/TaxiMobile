@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.customer.web_payment.WebPayActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/app_bar_layout"
+            layout="@layout/appbar_layout" />
+
+        <WebView
+            android:id="@+id/web_pay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/app_bar_layout" />
+
+        <include
+            android:id="@+id/loading_logo"
+            layout="@layout/loading_logo_layout" />
+
+        <include
+            android:id="@+id/view_error"
+            layout="@layout/web_view_error_layout"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

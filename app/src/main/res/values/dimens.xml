@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="list_item_avatar_size">48dp</dimen>
+    <dimen name="text_secondary">15sp</dimen>
+
+    <dimen name="list_item_avatar_margin_end">12dp</dimen>
+    <dimen name="feed_item_padding">16dp</dimen>
+
+
+    <dimen name="text_tertiary">11sp</dimen>
+    <dimen name="text_primary">17sp</dimen>
+
+    <dimen name="avatar_40">40dp</dimen>
+    <dimen name="avatar_52">52dp</dimen>
+
+    <dimen name="_1dp">1dp</dimen>
+    <dimen name="_2dp">2dp</dimen>
+    <dimen name="_4dp">4dp</dimen>
+    <dimen name="_8dp">8dp</dimen>
+    <dimen name="_16dp">16dp</dimen>
+
+    <dimen name="button_corner_radius">4dp</dimen>
+    <dimen name="button_corner_radius_16dp">16dp</dimen>
+    <dimen name="button_corner_radius_24dp">24dp</dimen>
+    <dimen name="button_corner_radius_32dp">32dp</dimen>
+
+    <dimen name="button_corner_radius_sign">25dp</dimen>
+
+    <dimen name="spacing_small">4dp</dimen>
+    <dimen name="text_h1">24sp</dimen>
+    <dimen name="text_h2">20sp</dimen>
+    <dimen name="text_h3">18sp</dimen>
+    <dimen name="text_h4">14sp</dimen>
+
+    <dimen name="ui_notification_toolbar_num_offset_y">4dp</dimen>
+    <dimen name="ui_notification_toolbar_textsize">7sp</dimen>
+    <dimen name="card_image_height">64dp</dimen>
+    <dimen name="card_image_width">32dp</dimen>
+    <dimen name="custom_showcase_radius">128dip</dimen>
+
+    <dimen name="image_loader_post_width">450dp</dimen>
+
+    <!-- Button -->
+    <dimen name="flat_button_size">60dp</dimen>
+    <dimen name="flat_button_padding">16dp</dimen>
+
+    <!-- On Going Call -->
+    <dimen name="caller_image_size">168dp</dimen>
+    <dimen name="caller_name_size">21dp</dimen>
+    <dimen name="radius">168dp</dimen>
+
+    <dimen name="overlay_i">96dp</dimen>
+
+    <dimen name="showcase_radius">40dp</dimen>
+    <dimen name="showcase_radius_inner">44dp</dimen>
+    <dimen name="showcase_radius_outer">48dp</dimen>
+    <dimen name="custom_showcase_width">40dp</dimen>
+    <dimen name="custom_showcase_height">40dp</dimen>
+    <dimen name="touch_button_wobble">12dp</dimen>
+    <dimen name="flingThreshold">100dp</dimen>
+
+    <dimen name="keyboard_row_height">48dp</dimen>
+    <dimen name="keyboard_text_size">30sp</dimen>
+
+
+    <dimen name="circle_radius">48dp</dimen>
+    <dimen name="line_width">4dp</dimen>
+    <dimen name="line_height">40dp</dimen>
+    <dimen name="stroke_width">4dp</dimen>
+    <dimen name="text_size">10sp</dimen>
+    <dimen name="inner_circle_radius">40dp</dimen>
+    <dimen name="inner_circle_margin">4dp</dimen>
+    <dimen name="line_top_margin">20dp</dimen>
+</resources>

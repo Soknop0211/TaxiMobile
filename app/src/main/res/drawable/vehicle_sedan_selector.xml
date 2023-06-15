@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_checked="false">
+
+        <layer-list>
+
+            <item android:width="100dp" android:height="100dp">
+                <bitmap android:alpha="0.2" android:src="@drawable/van" />
+
+            </item>
+
+        </layer-list>
+    </item>
+
+    <item>
+        <layer-list>
+            <item android:width="100dp" android:height="100dp" android:drawable="@drawable/sedan" />
+        </layer-list>
+    </item>
+
+</selector>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.eazy.daiku">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <permission
+        android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission"
+        tools:node="remove" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+        </intent>
+    </queries>
+    <queries>
+        <package android:name="com.google.android.apps.maps" />
+    </queries>
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.flash" />
+
+    <application
+        android:name=".EazyTaxiApplication"
+        android:allowBackup="true"
+        android:debuggable="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EazyTaxiApp"
+        android:usesCleartextTraffic="true"
+        tools:ignore="HardcodedDebugMode"
+        tools:replace="android:theme">
+        <activity
+            android:name=".ui.about_us.AboutUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.customer.step_booking.PaymentCompleteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.customer.step_booking.PreviewCheckoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.customer.step_booking.LocationKioskBookingTaxiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.customer.step_booking.ListCarTaxiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.customer.web_payment.WebPayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.customer.map.SearchMapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.customer.map.PickUpLocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.forget_password.ForgetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.withdraw.EazyTaxiWithdrawWebviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.withdraw.WithdrawMoneyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.identity_verification.IdentityVerificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.web_view.WebViewEazyTaxiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.wallet.MainWalletActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.history.HistoryTripActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.change_password.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.forget_password.VerifyOtpCodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.map.MapPreviewActivity"
+            android:exported="false"
+            android:label="@string/title_activity_maps_preview" />
+        <activity
+            android:name=".ui.upload_doc.UploadDocActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.scan_qr_code.ScanQRCodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.verification_pin_code.VerificationPinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.signup.SignUpActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.profile.EditProfileActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.profile.MyProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.customer.map.CustomerMapPreViewActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.splash_screen.SplashScreenActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SampleActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+
+        </activity>
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <!--
+         TODO: Before you run your application, you need a Google Maps API key.
+
+         To get one, follow the directions here:
+
+            https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+         Once you have your API key (it starts with "AIza"), define a new property in your
+         project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+         "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <!-- <meta-data -->
+        <!-- android:name="com.google.android.geo.API_KEY" -->
+        <!-- android:value="YOUR_API_KEY" /> -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${GOOGLE_MAPS_API_KEY}" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <receiver
+            android:name=".utility.service.MyBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="${applicationId}.broadcast.activity.CUSTOM_CHT_BROADCAST" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".utility.service.location.LocationUpdatesBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="${applicationId}.action.PROCESS_UPDATES" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".utility.service.ExitAppService"
+            android:stopWithTask="false" />
+
+        <!-- Foreground services in Android 10+ require type. -->
+        <!-- TODO: 2.2, Add foreground service type. -->
+        <service
+            android:name=".utility.service.location.foreground_.ForegroundOnlyLocationService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="location" />
+
+        <service
+            android:name=".utility.service.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!-- Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/wego_logo_icon" />
+        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+    </application>
+
+</manifest>

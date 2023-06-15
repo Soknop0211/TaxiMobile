@@ -1,0 +1,25 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\EazyTaxiApp\Taxi Mobile\numeric_keyboard\src\main\AndroidManifest.xml:1:1-51
+INJECTED from D:\EazyTaxiApp\Taxi Mobile\numeric_keyboard\src\main\AndroidManifest.xml:1:1-51
+INJECTED from D:\EazyTaxiApp\Taxi Mobile\numeric_keyboard\src\main\AndroidManifest.xml:1:1-51
+	package
+		ADDED from D:\EazyTaxiApp\Taxi Mobile\numeric_keyboard\src\main\AndroidManifest.xml:1:11-48
+		INJECTED from D:\EazyTaxiApp\Taxi Mobile\numeric_keyboard\src\main\AndroidManifest.xml
+		INJECTED from D:\EazyTaxiApp\Taxi Mobile\numeric_keyboard\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\EazyTaxiApp\Taxi Mobile\numeric_keyboard\src\main\AndroidManifest.xml:1:1-51
+uses-sdk
+INJECTED from D:\EazyTaxiApp\Taxi Mobile\numeric_keyboard\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\EazyTaxiApp\Taxi Mobile\numeric_keyboard\src\main\AndroidManifest.xml
+INJECTED from D:\EazyTaxiApp\Taxi Mobile\numeric_keyboard\src\main\AndroidManifest.xml
+INJECTED from D:\EazyTaxiApp\Taxi Mobile\numeric_keyboard\src\main\AndroidManifest.xml
+INJECTED from D:\EazyTaxiApp\Taxi Mobile\numeric_keyboard\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\EazyTaxiApp\Taxi Mobile\numeric_keyboard\src\main\AndroidManifest.xml
+		ADDED from D:\EazyTaxiApp\Taxi Mobile\numeric_keyboard\src\main\AndroidManifest.xml
+		INJECTED from D:\EazyTaxiApp\Taxi Mobile\numeric_keyboard\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\EazyTaxiApp\Taxi Mobile\numeric_keyboard\src\main\AndroidManifest.xml
+		ADDED from D:\EazyTaxiApp\Taxi Mobile\numeric_keyboard\src\main\AndroidManifest.xml
+		INJECTED from D:\EazyTaxiApp\Taxi Mobile\numeric_keyboard\src\main\AndroidManifest.xml

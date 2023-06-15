@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="false">
+
+    <RelativeLayout
+        android:id="@+id/container_loading_web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/contaner_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:cardCornerRadius="7dp"
+            app:strokeColor="@color/colorPrimary"
+            app:strokeWidth="0.95dp">
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/ic_launcher" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress_bar_web_view"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contaner_logo"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="7dp"
+            android:minHeight="24dp"
+            app:indicatorColor="@color/colorPrimary"
+            app:trackCornerRadius="4dp"
+            app:trackThickness="5dp" />
+
+        <TextView
+            style="@style/BodyTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/progress_bar_web_view"
+            android:layout_centerInParent="true"
+            android:text="@string/please_wait" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

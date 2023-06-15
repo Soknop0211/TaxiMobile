@@ -1,0 +1,37 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+
+    //new configure code
+    resolutionStrategy {
+        eachPlugin {
+            /*if (requested.id.id == 'dagger.hilt.android.plugin') {
+                 useModule("com.google.dagger:hilt-android-gradle-plugin:2.38")
+             }
+             if (requested.id.id == 'androidx.navigation.safeargs') {
+                 useModule("androidx.navigation:navigation-safe-args-gradle-plugin:2.3.5")
+             }*/
+
+            /* if (requested.id.id == 'androidx.navigation.safeargs') {
+                 useModule("androidx.navigation:navigation-safe-args-gradle-plugin:2.1.0")
+             }*/
+        }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = "https://jitpack.io"}
+    }
+}
+rootProject.name = "EazyTaxiApp"
+include ':app'
+include ':singledateandtimepicker'
+include ':numeric_keyboard'
+include ':pix'
+

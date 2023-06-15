@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/include_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/login_tv"
+                style="@style/HeadTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="@string/login"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/title_app_bar_tv"
+                style="@style/HeadTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/verification"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/title_text_view"
+                        style="@style/BodyTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:textAlignment="center"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:layout_editor_absoluteX="8dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/containerLogo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/title_text_view">
+
+                        <ImageView
+                            android:id="@+id/lockImg"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:alpha="0.8"
+                            android:src="@drawable/ic_lock_24"
+                            app:tint="@color/black" />
+
+
+                    </RelativeLayout>
+
+                    <com.mukesh.OtpView
+                        android:id="@+id/otp_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:enabled="false"
+                        android:inputType="numberPassword"
+                        android:itemBackground="@drawable/circle_drawable"
+                        android:minHeight="48dp"
+                        android:textColor="@color/colorPrimary"
+                        app:itemCount="6"
+                        app:itemHeight="24dp"
+                        app:itemWidth="24dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/containerLogo"
+                        app:lineColor="@color/transparent"
+                        app:viewType="line" />
+
+                    <LinearLayout
+                        android:id="@+id/forgot_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="18dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/otp_view">
+
+                        <TextView
+                            android:id="@+id/action_forgot_pin"
+                            style="@style/BodyTextStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:padding="8dp"
+                            android:text="@string/forget_password" />
+
+                    </LinearLayout>
+
+                    <com.konaire.numerickeyboard.NumericKeyboard
+                        android:id="@+id/numericKeyboard"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp"
+                        app:field="@+id/otp_view"
+                        app:keyHeight="80dp"
+                        app:keySpecial="C"
+                        app:keyTextColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/forgot_container" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </ScrollView>
+
+            <!-- show label version-->
+            <TextView
+                android:id="@+id/versionNameTv"
+                style="@style/BodyTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/numericKeyboard"
+                app:layout_constraintVertical_bias="0" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/loading_view"
+        layout="@layout/loading_layout"
+        android:visibility="gone" />
+
+</RelativeLayout>

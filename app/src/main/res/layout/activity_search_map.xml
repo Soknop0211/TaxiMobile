@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light"
+    android:orientation="vertical"
+    tools:context=".ui.customer.map.SearchMapActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/appbar_layout" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/container_action_sear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:elevation="15dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                app:strokeColor="@color/white"
+                app:strokeWidth="0.96dp">
+
+                <TextView
+                    android:id="@+id/action_search"
+                    style="@style/BodyTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="?attr/selectableItemBackground"
+                    android:padding="16dp"
+                    android:text="@string/search"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/container_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toStartOf="@id/container_action_sear"
+                android:elevation="15dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                app:strokeColor="@color/colorPrimary"
+                app:strokeWidth="0.96dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ed_search"
+                    style="@style/BodyTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:drawableStart="@drawable/ic_search_24"
+                    android:drawableTint="@color/colorPrimary"
+                    android:hint="@string/search_location"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:padding="15dp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/container_current_gps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginBottom="7dp"
+                android:background="?attr/selectableItemBackground"
+                android:padding="7dp"
+                android:visibility="gone"
+                >
+
+                <ImageView
+                    android:id="@+id/ic_gps"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/round_corner_white_point_a"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_gps_fixed_24"
+                    app:tint="@color/colorPrimary" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/ic_gps"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/BodyTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Current location"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/container_set_point_on_map"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/container_current_gps"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginBottom="7dp"
+                android:background="?attr/selectableItemBackground"
+                android:padding="7dp"
+                android:visibility="gone"
+                >
+
+                <ImageView
+                    android:id="@+id/ic_set_point_on_map"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/round_corner_white_point_a"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_location"
+                    app:tint="@color/colorPrimary"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/ic_set_point_on_map"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/BodyTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Set point on map"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/search_map_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/container_set_point_on_map"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:visibility="visible"
+                tools:listitem="@layout/search_map_adapter_layout" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/history_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:visibility="gone"
+                tools:listitem="@layout/history_search_map_adapter_layout"
+                android:layout_below="@id/container_set_point_on_map"
+                />
+
+            <TextView
+                android:id="@+id/no_data_found"
+                style="@style/BodyTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/no_data_found"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/search_map_loading"
+        layout="@layout/loading_layout"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.customer.map.CustomerMapPreViewActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/appbar_layout"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fragment
+                android:id="@+id/map_fragment"
+                class="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:id="@+id/upload_qr_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/action_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/circle_white_color_drawable"
+                    android:padding="13dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_settings_24"
+                        app:tint="@color/red" />
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="15dp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginEnd="11dp"
+                    app:cardCornerRadius="200dp"
+                    app:cardElevation="15dp"
+                    app:strokeColor="@color/colorPrimary"
+                    app:strokeWidth="0.96dp"
+                    tools:ignore="RtlHardcoded">
+
+                    <FrameLayout
+                        android:id="@+id/action_search_map"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:padding="17dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_search_24"
+                            app:tint="@color/colorPrimary" />
+
+                    </FrameLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="15dp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginEnd="11dp"
+                    app:cardCornerRadius="200dp"
+                    app:cardElevation="15dp"
+                    app:strokeColor="@color/red"
+                    app:strokeWidth="0.96dp"
+                    tools:ignore="RtlHardcoded">
+
+                    <FrameLayout
+                        android:id="@+id/action_hotel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:padding="17dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_baseline_location_on_24"
+                            app:tint="@color/red" />
+
+                    </FrameLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="15dp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginEnd="11dp"
+                    app:cardCornerRadius="200dp"
+                    app:cardElevation="15dp"
+                    app:strokeColor="@color/red"
+                    app:strokeWidth="0.96dp"
+                    tools:ignore="RtlHardcoded">
+
+                    <FrameLayout
+                        android:id="@+id/action_kiosk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:padding="17dp">
+
+                        <ImageView
+                            android:layout_width="22dp"
+                            android:layout_height="22dp"
+                            android:src="@drawable/ic_kiosk" />
+
+                    </FrameLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="15dp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginEnd="11dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="200dp"
+                    app:cardElevation="15dp"
+                    app:strokeColor="@color/colorPrimary"
+                    app:strokeWidth="0.96dp"
+                    tools:ignore="RtlHardcoded">
+
+                    <FrameLayout
+                        android:id="@+id/action_gps"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:padding="17dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_gps_fixed_24"
+                            app:tint="@color/colorPrimary" />
+
+                    </FrameLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="15dp"
+                    android:visibility="gone" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginEnd="11dp"
+                    app:cardCornerRadius="200dp"
+                    app:cardElevation="15dp"
+                    app:strokeColor="@color/colorPrimary"
+                    app:strokeWidth="0.96dp"
+                    tools:ignore="RtlHardcoded">
+
+                    <FrameLayout
+                        android:id="@+id/action_setting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:padding="17dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/settings"
+                            app:tint="@color/colorPrimary" />
+
+                    </FrameLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/action_confirm_booking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:elevation="15dp"
+                    android:padding="15dp"
+                    android:text="@string/confirm_booking"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:cornerRadius="17dp"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="0.96dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="17dp"
+        android:backgroundTint="@color/gray_light"
+        app:cardCornerRadius="200dp"
+        app:cardElevation="10dp"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="0.99dp">
+
+        <RelativeLayout
+            android:id="@+id/action_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_back"
+                app:tint="@color/colorPrimary" />
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <include
+        android:id="@+id/loading_view"
+        layout="@layout/loading_layout"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

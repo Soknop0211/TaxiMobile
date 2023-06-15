@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mainWalletFragment"
+        android:icon="@drawable/wallet_icon"
+        android:title="@string/main_wallet" />
+    <item
+        android:id="@+id/contactFragment"
+        android:icon="@drawable/custom_friend_drawable_"
+        android:title="@string/friend" />
+
+</menu>

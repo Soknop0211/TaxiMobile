@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.customer.map.PickUpLocationActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="17dp"
+        android:backgroundTint="@color/gray_light"
+        app:cardCornerRadius="200dp"
+        app:cardElevation="10dp"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="0.99dp">
+
+        <RelativeLayout
+            android:id="@+id/action_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackground">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_back"
+                app:tint="@color/colorPrimary" />
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/container_map"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/appbar_layout"
+                android:visibility="gone" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <fragment
+                    android:id="@+id/pick_up_location_map_fragment"
+                    class="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+                <LinearLayout
+                    android:id="@+id/container_set_point_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="139dp"
+                    android:layout_marginEnd="40dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/container_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        app:cardCornerRadius="2dp"
+                        app:cardElevation="20dp">
+
+                        <TextView
+                            android:id="@+id/show_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:padding="2dp"
+                            android:text="No address"
+                            android:textSize="15sp" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/lottie_maker"
+                        android:layout_width="40dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:tint="@color/colorPrimary"
+                        android:visibility="visible"
+                        app:lottie_autoPlay="true"
+                        app:lottie_fileName="maker-map.json"
+                        app:lottie_loop="true"
+                        app:lottie_progress="0">
+
+                    </com.airbnb.lottie.LottieAnimationView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/upload_qr_linear_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="11dp"
+                        android:visibility="gone"
+                        app:cardCornerRadius="200dp"
+                        app:cardElevation="15dp"
+                        app:strokeColor="@color/colorPrimary"
+                        app:strokeWidth="0.96dp"
+                        tools:ignore="RtlHardcoded">
+
+                        <FrameLayout
+                            android:id="@+id/action_scan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:padding="17dp">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/scan_qr_icon" />
+
+                        </FrameLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="15dp"
+                        android:visibility="gone" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="11dp"
+                        android:visibility="gone"
+                        app:cardCornerRadius="200dp"
+                        app:cardElevation="15dp"
+                        app:strokeColor="@color/colorPrimary"
+                        app:strokeWidth="0.96dp"
+                        tools:ignore="RtlHardcoded">
+
+                        <FrameLayout
+                            android:id="@+id/action_search_map"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:padding="17dp">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/ic_search_24" />
+
+                        </FrameLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="15dp"
+                        android:visibility="gone" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="11dp"
+                        android:visibility="gone"
+                        app:cardCornerRadius="200dp"
+                        app:cardElevation="15dp"
+                        app:strokeColor="@color/colorPrimary"
+                        app:strokeWidth="0.96dp"
+                        tools:ignore="RtlHardcoded">
+
+                        <FrameLayout
+                            android:id="@+id/action_location_user"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:padding="17dp">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/ic_people_marker" />
+
+                        </FrameLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="15dp"
+                        android:visibility="gone" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="11dp"
+                        android:visibility="gone"
+                        app:cardCornerRadius="200dp"
+                        app:cardElevation="15dp"
+                        app:strokeColor="@color/red"
+                        app:strokeWidth="0.96dp"
+                        tools:ignore="RtlHardcoded">
+
+                        <FrameLayout
+                            android:id="@+id/action_loaction_taxi_driver"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:padding="17dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/ic_kiosk" />
+
+                        </FrameLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="15dp" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="11dp"
+                        app:cardCornerRadius="200dp"
+                        app:cardElevation="15dp"
+                        app:strokeColor="@color/colorPrimary"
+                        app:strokeWidth="0.96dp"
+                        tools:ignore="RtlHardcoded">
+
+                        <FrameLayout
+                            android:id="@+id/action_setting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:padding="17dp">
+
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:src="@drawable/settings"
+                                app:tint="@color/colorPrimary" />
+
+                        </FrameLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="15dp" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="11dp"
+                        app:cardCornerRadius="200dp"
+                        app:cardElevation="15dp"
+                        app:strokeColor="@color/colorPrimary"
+                        app:strokeWidth="0.96dp"
+                        tools:ignore="RtlHardcoded">
+
+                        <FrameLayout
+                            android:id="@+id/action_gps"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:padding="17dp">
+
+                            <ImageView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:src="@drawable/ic_gps_fixed_24"
+                                app:tint="@color/colorPrimary" />
+
+                        </FrameLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/action_next_step"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="7dp"
+                        android:elevation="15dp"
+                        android:padding="15dp"
+                        android:text="@string/action_next"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:visibility="gone"
+                        app:cornerRadius="17dp"
+                        app:strokeColor="@color/white"
+                        app:strokeWidth="0.96dp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="20dp"
+            app:cardElevation="20dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:backgroundTint="@color/light_ui"
+                    android:elevation="5dp"
+                    app:cardCornerRadius="7dp"
+                    app:cardElevation="5dp"
+                    app:strokeColor="@color/white"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/action_pick_up_addres"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:padding="15dp"
+                            android:saveEnabled="false">
+
+                            <ImageView
+                                android:id="@+id/container_point_a"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/round_corner_maker_point_a" />
+
+
+                            <TextView
+                                android:id="@+id/tv_address_name_a"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="13dp"
+                                android:layout_toRightOf="@id/container_point_a"
+                                android:text="@string/your_curren_location"
+                                android:textColor="@color/black"
+
+                                />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gray"
+
+                            />
+
+                        <RelativeLayout
+                            android:id="@+id/action_drop_off_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackground"
+                            android:padding="15dp">
+
+
+                            <ImageView
+                                android:id="@+id/container_point_b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/round_corner_maker_point_b" />
+
+
+                            <TextView
+                                android:id="@+id/tv_address_name_b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="13dp"
+                                android:layout_toEndOf="@id/container_point_b"
+                                android:text="@string/drop_off_address"
+                                android:textColor="@color/black"
+
+                                />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/loading_shimmer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:visibility="visible"
+                            app:shimmer_auto_start="true">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <include layout="@layout/shimer_load_taxi_layout" />
+                            </LinearLayout>
+
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            tools:itemCount="1"
+                            tools:listitem="@layout/select_car_booing_adapter_layout" />
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/container_not_found_taxi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginVertical="10dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:backgroundTint="@color/light_ui"
+                            android:elevation="20dp"
+                            android:visibility="gone"
+                            app:cardCornerRadius="7dp"
+                            app:cardElevation="20dp"
+                            app:strokeColor="@color/white"
+                            app:strokeWidth="1dp">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <com.airbnb.lottie.LottieAnimationView
+                                    android:id="@+id/ic_not_found_taxi"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center"
+                                    android:padding="15dp"
+                                    android:visibility="visible"
+                                    app:lottie_autoPlay="true"
+                                    app:lottie_fileName="ic-not-found-taxi.json"
+                                    app:lottie_loop="true" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@id/ic_not_found_taxi"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_no_service"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="No service in this area"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="15sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toRightOf="@id/ic_not_found_taxi"
+                                        android:text="You can try another address"
+
+                                        />
+
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/loading_looking_driver"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="20dp"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="Looking for driver..."
+                                    android:textColor="@color/black"
+                                    android:textSize="25sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/tv_timer"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:textColor="@color/black"
+                                    android:textSize="18sp"
+                                    android:visibility= "gone" />
+
+
+                            </LinearLayout>
+
+
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/action_book_now"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginEnd="7dp"
+                            android:layout_marginBottom="7dp"
+                            android:elevation="15dp"
+                            android:enabled="false"
+                            android:padding="15dp"
+                            android:text="Book Now"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:visibility="visible"
+                            app:cornerRadius="17dp"
+                            app:strokeColor="@color/white"
+                            app:strokeWidth="0.96dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/action_cancel_booking"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="7dp"
+                            android:backgroundTint="@color/white"
+                            android:elevation="15dp"
+                            android:enabled="true"
+                            android:padding="15dp"
+                            android:text="@string/action_cancel"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:visibility="gone"
+                            app:cornerRadius="17dp"
+                            app:strokeColor="@color/colorPrimary"
+                            app:strokeWidth="0.96dp" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/loading_view"
+        layout="@layout/loading_layout"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/container_search_location"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/container_animate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/container_lottie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:visibility="visible"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="search-animation.json"
+                app:lottie_loop="true" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/container_search_not_found"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:lottie_autoPlay="true"
+                app:lottie_fileName="not-found-animate.json"
+                app:lottie_loop="true" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_searching"
+            style="@style/BodyTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/container_animate"
+            android:layout_centerHorizontal="true"
+            android:text="@string/searching_taxi_station" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/action_parking_taxi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="7dp"
+            android:elevation="15dp"
+            android:padding="15dp"
+            android:text="@string/taxi_station"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:cornerRadius="17dp"
+            app:strokeColor="@color/white"
+            app:strokeWidth="0.96dp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

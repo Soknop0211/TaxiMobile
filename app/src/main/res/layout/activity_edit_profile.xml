@@ -1,0 +1,307 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/appBar_ui"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary">
+
+            <ImageView
+                android:id="@+id/action_back_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_arrow_back_ios_new_24"
+                app:tint="@color/white" />
+
+            <TextView
+                style="@style/HeadTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/my_profile"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/action_update_mtb"
+                style="@style/Button.Large.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:text="@string/update"
+                android:textAllCaps="false"
+                app:strokeColor="@color/white"
+                app:strokeWidth="1dp" />
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--profile user-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/profile_picture_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/edit_img"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:elevation="2dp"
+                        android:src="@drawable/ic_pen_24"
+                        app:civ_border_color="@color/colorPrimary"
+                        app:civ_border_width="2dp"
+                        app:civ_circle_background_color="@color/white"
+                        app:layout_constraintBottom_toBottomOf="@+id/profile_cImg"
+                        app:layout_constraintEnd_toEndOf="@+id/profile_cImg" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_cImg"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/default_profile"
+                        app:civ_border_color="?attr/colorPrimary"
+                        app:civ_border_width="2dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+
+                    <!--first name-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/first_name_text_input_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/BodyTextStyle"
+                            android:id="@+id/first_name_text_input_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/first_name_required"
+                            android:inputType="textEmailAddress|textMultiLine|textNoSuggestions"
+                            android:padding="12dp"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--last name-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/last_name_text_input_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/BodyTextStyle"
+                            android:id="@+id/last_name_text_input_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/last_name_required"
+                            android:inputType="textEmailAddress|textMultiLine|textNoSuggestions"
+                            android:padding="12dp"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--email -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/email_text_input_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/BodyTextStyle"
+                            android:id="@+id/email_text_input_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/email"
+                            android:inputType="textEmailAddress|textMultiLine|textNoSuggestions"
+                            android:padding="12dp"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--gender -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/gender_text_input_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/BodyTextStyle"
+                            android:id="@+id/gender_text_input_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:drawableEnd="@drawable/ic_arrow_down_24"
+                            android:focusable="false"
+                            android:hint="@string/gender_required"
+                            android:inputType="none"
+                            android:longClickable="false"
+                            android:padding="12dp"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--dob -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/birthday_text_input_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/BodyTextStyle"
+                            android:id="@+id/birthday_text_input_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:drawableEnd="@drawable/ic_arrow_down_24"
+                            android:focusable="false"
+                            android:hint="@string/birthday_required"
+                            android:inputType="none"
+                            android:longClickable="false"
+                            android:padding="12dp"
+                            android:textSize="16sp" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--community taxi-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/community_taxi_text_input_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/BodyTextStyle"
+                            android:id="@+id/community_taxi_text_input_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:drawableEnd="@drawable/ic_arrow_down_24"
+                            android:focusable="false"
+                            android:hint="@string/choose_community_required"
+                            android:padding="12dp"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <!--Vehicle -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/vehicle_text_input_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/BodyTextStyle"
+                            android:id="@+id/vehicle_text_input_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:drawableEnd="@drawable/ic_arrow_down_24"
+                            android:focusable="false"
+                            android:hint="@string/vehicle"
+                            android:inputType="none"
+                            android:longClickable="false"
+                            android:padding="12dp"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--plate number-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/plate_number_text_input_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/BodyTextStyle"
+                            android:id="@+id/plate_number_text_input_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/plate_number"
+                            android:inputType="textEmailAddress|textMultiLine|textNoSuggestions"
+                            android:padding="12dp"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--Organization code-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/organization_code_text_input_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            style="@style/BodyTextStyle"
+                            android:id="@+id/organization_code_text_input_edit_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/organization_code_required"
+                            android:padding="12dp"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/loading_"
+        layout="@layout/loading_layout"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

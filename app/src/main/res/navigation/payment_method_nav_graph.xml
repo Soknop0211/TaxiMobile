@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/payment_method_nav_graph"
+    app:startDestination="@id/selectBankFragment">
+
+    <fragment
+        android:id="@+id/selectBankFragment"
+        android:name="com.eazy.daiku.ui.payment_method.SelectBankFragment"
+        android:label="fragment_select_bank"
+        tools:layout="@layout/fragment_select_bank" >
+        <action
+            android:id="@+id/action_selectBankFragment_to_addABAAccountNumberFragment"
+            app:destination="@id/addABAAccountNumberFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            />
+        <action
+            android:id="@+id/action_selectBankFragment_to_changeCardAndBankAccountFragment"
+            app:destination="@id/changeCardAndBankAccountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addABAAccountNumberFragment"
+        android:name="com.eazy.daiku.ui.payment_method.AddABAAccountNumberFragment"
+        android:label="fragment_add_a_b_a_account_number"
+        tools:layout="@layout/fragment_add_a_b_a_account_number" >
+        <action
+            android:id="@+id/action_addABAAccountNumberFragment_to_selectBankFragment"
+            app:destination="@id/selectBankFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changeCardAndBankAccountFragment"
+        android:name="com.eazy.daiku.ui.payment_method.ChangeCardAndBankAccountFragment"
+        android:label="fragment_change_card_and_bank_account"
+        tools:layout="@layout/fragment_change_card_and_bank_account" >
+        <action
+            android:id="@+id/action_changeCardAndBankAccountFragment_to_selectBankFragment"
+            app:destination="@id/selectBankFragment"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            />
+    </fragment>
+</navigation>

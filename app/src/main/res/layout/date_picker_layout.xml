@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:background="@android:color/transparent"
+    android:padding="16dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_round_4dp_outline"
+                android:orientation="vertical"
+                android:padding="1dp">
+
+                <TextView
+                    style="@style/BodyTextStyle"
+                    android:id="@+id/titlePickerDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="8dp"
+                    android:text="Select Date"
+                    android:textColor="@color/grey_500"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.01dp"
+                    android:background="@android:color/darker_gray" />
+
+                <com.github.florent37.singledateandtimepicker.SingleDateAndTimePicker
+                    android:id="@+id/select_date_time_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    app:picker_curved="true"
+                    app:picker_cyclic="true"
+                    app:picker_visibleItemCount="7" />
+
+            </LinearLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/action_ok"
+                style="@style/Button.Small.NoOutLine.8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:enabled="true"
+                android:minHeight="55dp"
+                android:text="ok"
+                android:textColor="@color/green_500"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>
